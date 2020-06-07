@@ -37,11 +37,11 @@ class RPKCore(val logger: Logger, val database: Database, val web: Web) {
      */
     val serviceManager: ServiceManager = ServiceManager()
 
-    init {
-        Thread {
-            web.server.start()
-            web.server.join()
-        }.start()
-    }
+//    init {
+//        Thread {
+//            web.server.start()
+//            web.server.join()
+//        }.start()
+//    }
 
 }
