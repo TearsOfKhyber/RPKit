@@ -30,7 +30,6 @@ import com.rpkit.characters.bukkit.gender.RPKGenderProviderImpl
 import com.rpkit.characters.bukkit.listener.PlayerDeathListener
 import com.rpkit.characters.bukkit.listener.PlayerInteractEntityListener
 import com.rpkit.characters.bukkit.listener.PlayerJoinListener
-import com.rpkit.characters.bukkit.listener.PlayerMoveListener
 import com.rpkit.characters.bukkit.newcharactercooldown.RPKNewCharacterCooldownProvider
 import com.rpkit.characters.bukkit.race.RPKRaceProvider
 import com.rpkit.characters.bukkit.race.RPKRaceProviderImpl
@@ -102,7 +101,7 @@ class RPKCharactersBukkit: RPKBukkitPlugin() {
     }
 
     override fun registerListeners() {
-        registerListeners(PlayerJoinListener(this), PlayerInteractEntityListener(this), PlayerMoveListener(this))
+        registerListeners(PlayerJoinListener(this), PlayerInteractEntityListener(this))
         if (config.getBoolean("characters.kill-character-on-death")) {
             registerListeners(PlayerDeathListener(this))
         }
